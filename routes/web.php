@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('index', [RegistroController::class, 'index'])->name('index');
+Route::get('/', [RegistroController::class, 'index'])->name('index');
 Route::get('formulario', [RegistroController::class, 'formulario'])->name('formulario');
 Route::get('nuevo', [RegistroController::class, 'nuevo'])->name('nuevo');
 Route::get('info/{id}', [RegistroController::class, 'info'])->name('info');

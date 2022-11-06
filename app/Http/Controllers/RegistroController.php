@@ -9,7 +9,7 @@ class RegistroController extends Controller
 {
     public function index()
     {
-        $datos = registro::get();
+        $datos = registro::latest()->orderBy('id', 'desc')->paginate(5);
         return view('layout', compact('datos'));
     }
 
@@ -26,7 +26,7 @@ class RegistroController extends Controller
             'institucion' => $request->institucion,
         ]);
 
-        return redirect('index');
+        return redirect('/');
     }
 
     public function info($id)
@@ -43,7 +43,7 @@ class RegistroController extends Controller
         $datos->institucion = $request->get('institucion');
         $datos->save();
 
-        return redirect('index');
+        return redirect('/');
     }
 
     public function eliminar($id)
