@@ -26,19 +26,26 @@
         <div class="col-10">
             <div class="mt-3 ms-3 me-3 " style="color: blue"><i class="bi bi-clipboard-minus me-2"></i>Registros |</div>
             <div class="card mt-3 ms-3 me-3">
-                <div class="row">
-                <div class="col-4 input-group mt-3 ms-3 me-3" style="width: 300px">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <div class="col-8">
-                    <form action="{{route('formulario')}}">
-                        <button type="submit" class="btn btn-primary mt-3 ms-3 me-3 float-end" style="border-radius: 20px"> <i class="bi bi-plus-circle me-2"></i>Nuevo registro</button>
-                    </form>
+                <nav class="row navbar navbar-expand-xl">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="col-4 input-group mt-3 ms-3 me-3" style="width: 300px">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                          </div>
+                          <div class="col-8">
+                            <form action="{{route('formulario')}}">
+                                <button type="submit" class="btn btn-primary mt-3 ms-3 me-3 float-end" style="border-radius: 20px"> <i class="bi bi-plus-circle me-2"></i>Nuevo registro</button>
+                            </form>
 
-                    <button class="btn btn-primary mt-3 ms-3 me-3 float-end text-primary" style="border-radius: 20px; background-color: white"><i class="bi bi-arrow-down-circle me-2"></i>Descargar listado</button>
-                  </div>
-                </div>
+                            <button class="btn btn-primary mt-3 ms-3 me-3 float-end text-primary" style="border-radius: 20px; background-color: white"><i class="bi bi-arrow-down-circle me-2"></i>Descargar listado</button>
+                          </div>
+                      </div>
+                    </div>
+                  </nav>
                 <div class="table-responsive-md">
             <table class="table  mt-3 ms-3 me-3">
                 <thead class="text-primary">
@@ -79,5 +86,7 @@
 
     </div>
 </div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
