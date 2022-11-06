@@ -25,13 +25,13 @@
             </form>
             <form action="" class="p-2 mt-2  bg-primary ms-3" style="border-radius: 40px 0 0 40px">
                 <div class="ms-5">
-                <i class="bi bi-plus-circle"></i>
-                <input type="submit" value="Nuevo registro" class="btn btn-sm fs-5 text-white">
+                    <i class="bi bi-pencil"></i>
+                <input type="submit" value="Editar registro" class="btn btn-sm fs-5 text-white">
             </div>
             </form>
         </div>
         <div class="col-10">
-            <div class="mt-3 ms-3 me-3 " style="color: blue"> <i class="bi bi-plus-circle"></i>Nuevo registro |</div>
+            <div class="mt-3 ms-3 me-3 " style="color: blue"> <i class="bi bi-plus-circle"></i>Editar registro |</div>
             <div class="mt-3 ms-3 me-3 " style="color: blue"> <i class="bi bi-person"></i>Informacion personal del paciente</div>
                 <div class="card mt-3 ms-3 me-3">
                     <div class="card m-5 style="width: 400px">

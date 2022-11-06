@@ -14,19 +14,14 @@
 @include('cabecera')
 <div class="container-fluid h-100">
     <div class="row h-100">
-        <div class="col-2" style="background-color: deepskyblue; padding: 0;">
-            <form action="" class="p-2 mt-2 bg-primary ms-3" style="border-radius: 40px 0 0 40px">
-                <div class="ms-5">
-                    <i class="bi bi-clipboard-minus"></i>
-                <input type="submit" value="Registros" class="btn btn-sm fs-5 text-white">
-                </div>
-            </form>
-            <form action="{{route('formulario')}}" class="p-2 mt-2  ms-3" style="border-radius: 40px 0 0 40px" method="GET">
-                <div class="ms-5">
-                <i class="bi bi-plus-circle"></i>
-                <input type="submit" value="Nuevo registro" class="btn btn-sm fs-5 text-white">
+        <div class="col-2 container-fluid" style="background-color: deepskyblue; padding: 0;">
+            <div class="p-2 mt-2 bg-primary ms-2 " style="border-radius: 40px 0 0 40px">
+                <a href="" class="ms-3 btn btn-sm fs-5 text-white"><i class="bi bi-clipboard-minus me-2"></i>Registros</a>
             </div>
-            </form>
+            <div class="p-2 mt-2  ms-1" style="border-radius: 40px 0 0 40px">
+                <a href="{{route('formulario')}}" class="ms-4 btn btn-sm fs-5 text-white"><i class="bi bi-plus-circle me-2"></i>Nuevo registro</a>
+            </div>
+
         </div>
         <div class="col-10">
             <div class="mt-3 ms-3 me-3 " style="color: blue"><i class="bi bi-clipboard-minus me-2"></i>Registros |</div>
@@ -44,6 +39,7 @@
                     <button class="btn btn-primary mt-3 ms-3 me-3 float-end text-primary" style="border-radius: 20px; background-color: white"><i class="bi bi-arrow-down-circle me-2"></i>Descargar listado</button>
                   </div>
                 </div>
+                <div class="table-responsive-md">
             <table class="table  mt-3 ms-3 me-3">
                 <thead class="text-primary">
                     <tr>
@@ -64,12 +60,13 @@
                         <td class="text-center">
                                 <button class="btn text-primary rounded-circle"><i class="bi bi-eye"></i></button>
                                 <a href="{{route('info',$dato->id)}}" class="btn text-primary rounded-circle" ><i class="bi bi-pencil"></i></a>
-                                <a href="{{route('eliminar',$dato->id)}}"  class="btn text-primary rounded-circle" ><i class="bi bi-trash3"></i></a>
+                                <a href="{{route('eliminar',$dato->id)}}"  class="btn text-primary rounded-circle" onclick="return confirm('esta a punto de eliminar un usuario, seguro??')" ><i class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+        </div>
 
             <div>
                 <div class="float-end">
