@@ -16,19 +16,14 @@
 @include('cabecera')
 <div class="container-fluid h-100">
     <div class="row h-100">
-        <div class="col-2" style="background-color: deepskyblue; padding: 0;">
-            <form action="{{route('index')}}" class="p-2 mt-2 ms-3" style="border-radius: 40px 0 0 40px">
-                <div class="ms-5">
-                    <i class="bi bi-clipboard-minus"></i>
-                <input type="submit" value="Registros" class="btn btn-sm fs-5 text-white">
-                </div>
-            </form>
-            <form action="" class="p-2 mt-2  bg-primary ms-3" style="border-radius: 40px 0 0 40px">
-                <div class="ms-5">
-                <i class="bi bi-plus-circle"></i>
-                <input type="submit" value="Nuevo registro" class="btn btn-sm fs-5 text-white">
+        <div class="col-2 container-fluid" style="background-color: deepskyblue; padding: 0;">
+            <div class="p-2 mt-2  ms-2 " style="border-radius: 40px 0 0 40px">
+                <a href="{{route('index')}}" class="ms-3 btn btn-sm fs-5 text-white"><i class="bi bi-clipboard-minus me-2"></i>Registros</a>
             </div>
-            </form>
+            <div class="p-2 mt-2 bg-primary ms-1" style="border-radius: 40px 0 0 40px">
+                <a href="" class="ms-4 btn btn-sm fs-5 text-white"><i class="bi bi-plus-circle me-2"></i>Nuevo registro</a>
+            </div>
+
         </div>
         <div class="col-10">
             <div class="mt-3 ms-3 me-3 " style="color: blue"> <i class="bi bi-plus-circle"></i>Nuevo registro |</div>
